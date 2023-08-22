@@ -1,0 +1,15 @@
+{
+    "name": "Web-assistant",
+    "version": "1.0.0",
+    "description": "Run your browser on your voice command",
+    "manifest_version": 3,
+    "author": "Woadud Akand",
+    "permissions": ["activeTab", "scripting"], 
+    "background": {
+        "service_worker": "background.js"
+    },    
+    "action":{        
+        "default_title": "Web-assistant"
+    },
+    "host_permissions": ["http://*/", "https://*/*"]
+}
