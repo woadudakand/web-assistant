@@ -24,13 +24,13 @@ chrome.action.onClicked.addListener(async (tab) => {
         if(nextState === "ON") {
             chrome.scripting.executeScript({
                 target: {tabId: tab.id},
-                files: ['main.js']
+                files: ['content.js']
               });
         } else {
-            // chrome.scripting.executeScript({
-            //     target: {tabId: tab.id},
-            //     files: []
-            //   });
+            chrome.scripting.executeScript({
+                target: {tabId: tab.id},
+                files: []
+              });
         }
     }
 })
